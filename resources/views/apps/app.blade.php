@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html >
   <head>
 
     @include('base_layout.header.header')
@@ -18,7 +18,8 @@
       </div>
       <!-- /.content-wrapper -->
 
-      @include('base_layout.footer.footer')
+
+      
 
       <!-- Control Sidebar -->
       {{-- <aside class="control-sidebar control-sidebar-dark">
@@ -185,9 +186,29 @@
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
       {{-- <div class="control-sidebar-bg"></div> --}}
+      @includeIf('base_layout.footer.footer')
+        
     </div><!-- ./wrapper -->
-    @include('base_layout.footer.footer-meta')
+    @includeIf('base_layout.footer.footer-meta')
+    @yield('js')
 
-    @stack('js')
   </body>
 </html>
+<script>
+
+
+jQuery(document).ready(function($) {
+
+    var $language_SwitcherForm = $('#language_Switcher');
+    
+    var $languageSelect = $('#language');
+
+    $languageSelect.on('change' , function(){
+
+    $language_SwitcherForm.submit();
+
+});
+});
+
+</script>
+
