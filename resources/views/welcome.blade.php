@@ -22,7 +22,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <label for="inputPassword3" class="col-sm-2 control-label">{{ __('dashboard.attributes.password') }}</label>
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
                     </div>
@@ -47,13 +47,6 @@
           </div><!--/.col (right) -->
   </section>
 
-  <form action="{{ route('language') }}" method="POST" id="language_Switcher">
-        @csrf
-        <select name="language" id="language">
-          <option value="en" {{ (session()->has('locale') && session('locale') == 'en' ? 'selected' : '' ) }} >English</option>
-          <option value="ar" {{ (session()->has('locale') && session('locale') == 'ar' ? 'selected' : '' ) }}>Arabic</option>
-        </select>
-      </form>
 
 @endsection
 

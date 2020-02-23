@@ -5,7 +5,7 @@
     @include('base_layout.header.header')
     @stack('style')
   </head>
-  <body class="skin-blue sidebar-mini">
+  <body class="hold-transition sidebar-mini">
     <div class="wrapper">
 
         @include('base_layout.nav-bar')
@@ -19,7 +19,7 @@
       <!-- /.content-wrapper -->
 
 
-      
+
 
       <!-- Control Sidebar -->
       {{-- <aside class="control-sidebar control-sidebar-dark">
@@ -187,7 +187,7 @@
            immediately after the control sidebar -->
       {{-- <div class="control-sidebar-bg"></div> --}}
       @includeIf('base_layout.footer.footer')
-        
+
     </div><!-- ./wrapper -->
     @includeIf('base_layout.footer.footer-meta')
     @yield('js')
@@ -200,7 +200,7 @@
 jQuery(document).ready(function($) {
 
     var $language_SwitcherForm = $('#language_Switcher');
-    
+
     var $languageSelect = $('#language');
 
     $languageSelect.on('change' , function(){
